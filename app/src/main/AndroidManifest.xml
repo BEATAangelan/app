@@ -20,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.SignActivity" />
-        <activity android:name=".activity.ShowActivity"></activity>
+        <activity android:name=".activity.ShowActivity" />
+        <activity android:name=".activity.HotShowActivity" />
+        <activity android:name=".activity.MasigActivity" />
+        <activity android:name=".activity.QualityActivity"></activity>
     </application>
 
 </manifest>

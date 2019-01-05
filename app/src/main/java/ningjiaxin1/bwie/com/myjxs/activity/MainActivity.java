@@ -3,6 +3,9 @@ package ningjiaxin1.bwie.com.myjxs.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,6 +20,7 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnTouch;
 import ningjiaxin1.bwie.com.myjxs.R;
 import ningjiaxin1.bwie.com.myjxs.api.Api;
 import ningjiaxin1.bwie.com.myjxs.bean.Login;
@@ -84,6 +88,16 @@ public class MainActivity extends BaseActionBar implements IView {
             }
         });
     }
+    @OnTouch(R.id.image_eye)
+    public boolean SignEyeClick(MotionEvent event){
+        if(event.getAction()==MotionEvent.ACTION_DOWN){
+            phone_pwd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+        }else if(event.getAction()==MotionEvent.ACTION_UP){
+            phone_pwd.setTransformationMethod(PasswordTransformationMethod.getInstance());
+        }
+        return false;
+    }
+
     @OnClick(R.id.text_sign)
     public void setbutton(){
         Intent intent = new Intent(MainActivity.this, SignActivity.class);
@@ -135,4 +149,5 @@ public class MainActivity extends BaseActionBar implements IView {
     public void onfailed(Exception e) {
         Toast.makeText(MainActivity.this,"失败！！！",Toast.LENGTH_SHORT).show();
     }
+
 }

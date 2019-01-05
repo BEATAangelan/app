@@ -18,10 +18,8 @@ import ningjiaxin1.bwie.com.myjxs.fragment.FragmentHome;
 import ningjiaxin1.bwie.com.myjxs.fragment.FragmentMy;
 
 public class ShowActivity extends AppCompatActivity {
-
     private ViewPager pager;
     private RadioGroup group;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,10 +55,10 @@ public class ShowActivity extends AppCompatActivity {
                         pager.setCurrentItem(0);
                         break;
                     case R.id.button_circle:
-                        pager.setCurrentItem(2);
+                        pager.setCurrentItem(1);
                         break;
                     case R.id.button_car:
-                        pager.setCurrentItem(1);
+                        pager.setCurrentItem(2);
                         break;
                     case R.id.button_footprint:
                         pager.setCurrentItem(3);

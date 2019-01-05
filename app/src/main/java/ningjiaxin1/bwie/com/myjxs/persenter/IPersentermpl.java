@@ -43,5 +43,12 @@ public class IPersentermpl implements IPersenter{
             }
         });
     }
-
+   public void destroy(){
+        if(modelmpl!=null){
+            modelmpl=null;
+            }
+            if(mview!=null){
+            mview=null;
+            }
+   }
 }
